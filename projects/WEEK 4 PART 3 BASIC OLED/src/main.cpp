@@ -12,7 +12,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
 
 
 void setup() {
-  Wire.begin(21, 22); // ESP32 default I2C pins (SDA=21, SCL=22)
+  Wire.begin(22, 23); // ESP32 default I2C pins (SDA=21, SCL=22)
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR)) {
     // If it fails, check wiring and address (0x3C/0x3D)
@@ -43,7 +43,7 @@ void loop() {
   display.setTextSize(2);
   display.setTextColor(SSD1306_WHITE);
   display.setCursor(20, 26);
-  display.println("AI");
+  display.println("AFFAN");
   display.display();
   delay(2000);
 }
